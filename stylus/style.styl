@@ -1,0 +1,537 @@
+@import "normalize.styl"
+@import "icon.styl"
+@import "nib"
+@import "nib/vendor"
+@import "owl.transitions.styl"
+@import "owl.carousel.styl"
+@import "owl.theme.styl"
+/*prefixes*/
+vendor-prefixes = o ms moz webkit official
+azul = #004697
+azulOscuro = #202951
+negro = #333 
+blanco = #F9F9F9
+azulhover = #0776FB
+verde = #04772D
+/*body
+    background blanco
+    color  negro
+.Header
+    ul
+        margin 0;
+    .active
+        border-bottom 3px solid azul
+        
+    &-menu1
+        width: 100%;
+        overflow: hidden;
+        nav
+            display: inline-block;
+            float: right;
+            font-size 0
+            ul
+                list-style: none;
+                display: inline-block;
+                padding: 1em;
+                background azul
+                font-size: 13px;
+                cursor pointer
+                transition: all 0.5s ease-in;
+                &:hover
+                    background azulOscuro
+                li
+                    color blanco
+    &-menu2
+        width: 100%;
+        overflow: hidden;
+        border-bottom: 1px solid #004697;
+        position relative
+        .Logo
+            display inline-block
+        
+        nav
+            display: inline-block;
+            right: 0;
+            font-size: 0;
+            bottom: 0;
+            position: absolute;
+            ul
+                list-style: none;
+                display: inline-block;
+                padding: 1em;
+                font-size: 16px;
+                cursor pointer
+                transition: all 0.5s ease-in;
+                border-bottom 3px solid transparent
+                &:hover
+                     border-bottom 3px solid azul
+                li
+                    color azul
+                    
+
+.Contenedor-menu
+    display: inline-block;
+    margin-top: 1em;
+    width: 20%;
+    .MenuAside
+        &-ul
+            padding: 0;
+            margin: 0;
+        &-li
+            padding: 1em 2em;
+            color: azul;
+            transition: all 0.5s ease-in;            
+            text-align: center;
+            border-right: 3px solid transparent;
+            cursor pointer
+            list-style: none;
+            &:hover
+                border-right: 3px solid azul;
+                box-shadow: 1px 3px 10px #ccc;
+        .active
+            border-right: 3px solid #004697;
+            box-shadow: 1px 3px 10px #ccc;
+            font-weight bold
+.Contenedor-content
+    display: inline-block;
+    width: 80%;
+    float: right;
+    margin-top: 1em;
+    .cont1
+        display block
+    .cont2
+    .cont3
+        display none
+    .contents
+        text-align center
+        .contents-chart
+            position relative
+            width: 400px;
+            display inline-block
+            .mayor
+                position: absolute;
+                margin: 0 auto;
+                right: 42%;
+                top: 9em;
+                h2
+                h3
+                    margin 0
+                
+          
+        h1
+            color azul
+            margin 0
+            text-align center
+        form
+            display: inline-block;
+            width: 40%;
+            padding: 1em;
+            input
+                overflow: auto;
+                resize: none;
+                display: inline-block;
+                padding: .2em 1.2em;
+                width: 100%;
+                box-sizing: border-box;
+                color: #004697;
+                transition: all 0.5s ease-in; 
+            select
+            textarea
+                overflow: auto;
+                resize: none;
+                display: inline-block;
+                padding: 0.8em;
+                width: 100%;
+                box-sizing: border-box;
+                color: #004697;
+                transition: all 0.5s ease-in;
+            .button
+                box-sizing: border-box;
+                width: 100%;
+                padding: 0.8em;
+                background azul
+                color blanco
+                border none
+                transition: all 0.5s ease-in;
+                &:hover
+                    background azulOscuro
+.Contenedor
+    text-align: center;
+    .contentar
+        width: 80%;
+        display: inline-block;
+        h1
+            font-size 1.5em
+            color  azul
+            transition all 0.2s ease-in
+            .back
+                display inline-block
+                cursor pointer
+                transition all 0.2s ease-in
+                &:hover
+                    color azulhover 
+                    
+        .content-wrap
+            width: 100%
+            display: inline-block;
+            table
+                margin: 0 auto;
+                thead
+                    display inline-block
+                    tr
+                        cursor pointer
+                        display: block
+                        transition all .2s ease-in-out;
+                        background azul
+                        color blanco
+                        td
+                            padding: 0.9em;
+                            width: 9em;
+                            p
+                                margin 0
+            .Proc
+                display inline-block
+                box-sizing: border-box; 
+               
+                tr
+                    cursor pointer
+                    display: block
+                    transition all .2s ease-in-out;
+                    &:hover
+                        box-shadow 1px 3px 11px negro  
+                        background azulhover
+                        color blanco
+                
+                td
+                    padding: 0.9em;
+                    width: 9em;
+                    p
+                        margin 0
+                
+            .proceso
+                h3
+                    top: 2.5em;
+                    position: relative !important;
+                    left 0 !important
+            .modulos
+                display: inline-block;
+                width: 250px;
+                height: 150px;
+                background: #004697;
+                position: relative;
+                cursor: pointer;
+                margin-right: 0.2em;
+                overflow hidden
+                transition: all .2s ease-in-out;
+                &:hover img
+                    transform: scale(2,2);
+                &:hover
+                    background azulhover
+                img
+                    width: 100%;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    opacity: 0.3;
+                    height: 100%;
+                    transition: all .2s ease-in-out;
+                h3
+                    position: absolute;
+                    z-index: 1;
+                    bottom: 0;
+                    left: 1em;
+                    font-size 1em
+                    color: white;
+                    .grow { transition: all .2s ease-in-out; }
+
+
+
+.form
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    form
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        width: 310px;
+        background: white;
+        padding: 1em;
+        box-shadow: 1px 3px 11px #ccc;
+        align-content: center;
+        max-height: 350px;
+        position relative
+        a
+            text-decoration: none;
+            color: azul;
+            transition: all .2s ease-in-out;
+            text-align right
+            &:hover
+                color azulhover
+        h1
+            margin: 0;
+      
+            background: azul;
+            color: white;
+            padding: 0.5em;
+            font-weight: lighter;
+            position: absolute;
+            top: -50px;
+            left: -10px;
+        input
+            line-height: normal;
+            background: transparent;
+            border: 0;
+            border-bottom: 1px solid azul;
+            padding: 1em 0.5em 0.2em 0.5em;
+            outline: none;
+            font-size: 1.5em;
+            color: azul;
+            text-align: left;
+            transition: all .2s ease-in-out;
+            &:focus
+                border-bottom: 1px solid azulhover;
+                color azulhover
+                
+        button
+            padding: 0.5em;
+            margin: 1em;
+            color: azul;
+            border: 1px solid azul;
+            background: transparent;
+            font-size: 1.5em;
+            transition: all .2s ease-in-out;
+            &:hover
+                background azulhover
+                color white
+                border: 1px solid azulhover;
+.formAdd
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(63, 113, 175, 0.58)
+    z-index: 1;
+    .formContainer
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        width: 350px;
+        padding: 1em;
+        background: white;
+        box-shadow: 1px 3px 11px rgba(74, 71, 76, 0.81);
+        position relative
+        .titulo
+            background: azul;
+            color: white;
+            padding: 0.5em;
+            font-weight: lighter;
+            position: absolute;
+            top: -50px;
+            left: -10px;
+            
+        input
+        select
+            line-height: normal;
+            background: transparent;
+            border: 0;
+            border-bottom: 1px solid azul;
+            padding: 1em 0.5em 0.2em 0.5em;
+            outline: none;
+            font-size: 1.5em;
+            color: azul;
+            text-align: left;
+            transition: all .2s ease-in-out;
+           
+            &:focus
+                border-bottom: 1px solid azulhover;
+                color azulhover
+        .procesf
+            width: 234px;
+        .procesfc
+            .addProc
+                display block
+                text-decoration: none;
+                color: #174697;
+                margin-top: 0.5em;
+                
+            
+        button
+            padding: 0.5em;
+            margin: 1em;
+            color: azul;
+            border: 1px solid azul;
+            background: transparent;
+            font-size: 1.5em;
+            transition: all .2s ease-in-out;
+            &:hover
+                background azulhover
+                color white
+                border: 1px solid azulhover;
+    
+    
+
+    
+
+    
+        */
+.wrap
+    max-width: 972px;
+    margin: 0 auto;
+.wrapnormal
+    max-width: 992px;
+    margin: 0 auto;
+body
+    margin 0
+    .Header
+        border-bottom: 1px solid #7DB952;
+        box-shadow: 0px 2px 20px #D6D6D6;
+        margin-top: 3.3em;
+        p
+            margin 0
+        &-menuCart
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            background: #7DB952;
+            color white
+            position: fixed;
+            width: 100%;
+            z-index: 2;
+            top: 0;
+            .phone
+            .findUs
+            .cart
+                padding: 1em;
+        &-menuMain
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between
+            .logo
+                img
+                    width 245px
+            .menu
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color #7DB952
+                li
+                    display: inline-block;
+                    padding: 1.6em 1em;
+                    border-bottom 2px solid transparent
+                    transition: all .2s ease-in-out;
+                    &:hover
+                        border-bottom: 2px solid #0E6B26;
+                        cursor pointer
+    .Slider
+        min-height: 470px;
+        margin-top: 2em;
+        .gif
+            top: 165px;
+            position: relative;   
+        .item
+            display: flex;
+            .imgSlider
+                img
+                    width 400px
+                    height 400px
+            
+            .text
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                p
+                    margin 0
+                .contenText
+                    font-size: 1.5em;
+                    color: #305425;
+                .buy
+                    margin-top 1.2em
+                    .button
+                        width: 128px;
+                        border: 0;
+                        padding: 1em;
+                        background: #f5460d;
+                        color: white;
+                        text-align: center;
+                        display: inline-block;
+                        margin-top: 1em;
+                        cursor pointer
+                    .information
+                        display: inline-block;
+                        margin-left: 1em;
+                        a
+                            text-decoration: none;
+                            color: #305425;
+                            transition: all .2s ease-in-out;
+                            &:hover
+                                color #f5460d                                
+                    .price
+                    .textProd
+                        font-size 1.8em
+                        color #305425
+    .products
+        min-height 750px
+    .sections
+        position relative
+        padding 2.5em 0
+        border-top: 3px solid #7DB952;
+        
+        h1
+            text-align center
+            color verde
+            font-family: "Segoe Print", "Andy", Calibri, Tahoma;
+        article
+            color negro
+            font-size: 1.5em;
+            text-align: justify;
+            
+            .left
+                position: absolute;
+                bottom: 1em;
+                z-index: -1;
+                left: 0;
+            .right
+                position: absolute;
+                bottom:1em;
+                z-index: -1;
+                right: 0;
+        .prods
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            
+            .prod
+                width: 200px;
+                padding 1em
+                transition: all .2s ease-in-out;
+                &:hover
+                    cursor pointer
+                    box-shadow: 1px 3px 15px rgba(129, 212, 158, 0.92);
+                img
+                    width: 100%;
+                p
+                    font-family: "Segoe Print", "Andy", Calibri, Tahoma;
+                    color verde
+                    font-size: 0.7em;
+                    text-align: center;
+                    
+    .imgparal
+	    height 300px
+        
+            
+            
+            
+    
+        
+    
+
+
+
+
+
+

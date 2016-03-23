@@ -9,13 +9,16 @@
 <body>
     <header class="Header ">
         <div class="Header-menuCart">
-            <div class="phone">
+            <div class="icon phone">
+                <span class="ic icon-phone"></span>
                 <p>786-518-2903</p>        
             </div>
-            <div class="findUs">
+            <div  class="icon findUs">
+                 <span class="ic icon-location"></span>
                 <p>Find Us</p>         
             </div>
-            <div class="cart">
+            <div class="icon cart">
+                 <span class="ic icon-cart"></span>
                 <p class="cantidad">0</p>           
             </div>
         </div>

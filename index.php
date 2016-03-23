@@ -20,6 +20,22 @@
     </section>
    	<div class="imgparal" data-parallax="scroll" data-bleed="0"  data-z-index="1" data-image-src="./img/herball.jpg">
 	</div>
+<section class="sections amazons">
+    <h1 class="wrap">Nature's best now in your hands</h1>
+    <article class="wrapnormal lel">
+        <div class="amazonlogo"><img src="img/amazon.png" alt="" width="286"></div>
+        <div class="phrases">
+            <div class="phrase">
+                <p>The south of the Colombian Amazon close to what is now known as Sibundoy, on the Putumayo riverside, was the origin of much knowledge about medicinal herbs. The wise indigenous people from the region were convinced that diseases were spirits and they could be cured using the appropriate herb. These plants had the virtue of take out the evil spirit from the sick body, giving relief for the disease.</p>
+            </div>
+            <div class="phrase">
+                <p>The Colombian Amazon has been for years the source of many scientific discoveries if which it would have been impossible to produce hundreds of new pharmaceutical products. That is why we should protect the Colombian Amazon to continue proving its benefits to the global health and produce much of the oxygen we breathe.</p>
+            </div>
+        </div>
+    </article>
+</section>
+<div class="imgparal" data-parallax="scroll" data-bleed="0"  data-z-index="1" data-image-src="./img/herball2.jpg">
+	</div>
 <section class="sections products">
     <h1 class="wrap">Our Products</h1>
     <article class="wrapnormal">
@@ -28,8 +44,6 @@
         </div>
     </article>
 </section>
-<div class="imgparal" data-parallax="scroll" data-bleed="0"  data-z-index="1" data-image-src="./img/herball2.jpg">
-	</div> 
 <?php include_once("includes/footer.php"); ?>
 
 <script>
@@ -37,5 +51,21 @@
     prod();
     initCart();
     setProd();
+      
+                    $(".phrases").owlCarousel({
+ 
+                        //navigation : true,  Show next and prev buttons
+                        slideSpeed : 200,
+                        paginationSpeed : 400,
+                        singleItem:true
+                    
+                        // "singleItem:true" is a shortcut for:
+                        // items : 1, 
+                        // itemsDesktop : false,
+                        // itemsDesktopSmall : false,
+                        // itemsTablet: false,
+                        // itemsMobile : false
+                    
+                    }); 
 });
 </script>

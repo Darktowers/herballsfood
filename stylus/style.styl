@@ -379,6 +379,12 @@ verde = #04772D
 
     
         */
+.lel
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1em 0;
 .wrap
     max-width: 972px;
     margin: 0 auto;
@@ -404,9 +410,24 @@ body
             z-index: 2;
             top: 0;
             .phone
+                padding: 1em 1.5em;
             .findUs
+                padding: 1em 1.5em;
             .cart
-                padding: 1em;
+                padding: 1em 2em;
+                .cantidad
+                    position: absolute;
+                    /* width: 50px; */
+                    padding: 0.7em 1em;
+                    top: 4px;
+                    left: 15px;
+                    border-radius: 50%;
+                    background: #F5460D;
+            .icon
+                position relative
+                .ic
+                    position absolute
+                    left -10px
         &-menuMain
             display: flex;
             flex-direction: row;
@@ -480,7 +501,8 @@ body
         position relative
         padding 2.5em 0
         border-top: 3px solid #7DB952;
-        
+        box-shadow: 1px 3px 15px #888;
+        z-index: 1;
         h1
             text-align center
             color verde
@@ -515,13 +537,46 @@ body
                 img
                     width: 100%;
                 p
-                    font-family: "Segoe Print", "Andy", Calibri, Tahoma;
+                  
                     color verde
                     font-size: 0.7em;
                     text-align: center;
                     
     .imgparal
 	    height 300px
+    .amazons
+        .phrases
+            background url('../img/old-paper.png') no-repeat
+            width: 400px;
+            height: 300px;
+            padding: 1.3em;
+            background-size: 100% 100%;
+            cursor -webkit-grab
+            .phrase
+               font-family: "Segoe Print", "Andy", Calibri, Tahoma;
+               font-size 0.7em 
+        .amazonlogo
+            img
+                width 200px;
+    .shopCart
+        h2
+            font-weight: 100;
+            border-bottom: 1px solid #7DB952;
+        .itemComprado
+            display: flex;
+            align-items: center;
+            align-content: center;
+            justify-content: space-around;
+            padding: 1em;
+            border-bottom: 1px solid #7DB952;
+            .itemImg
+                img
+                    width: 120px;
+            .itemNombre
+                max-width: 175px;
+                text-align: left;
+        
+        
         
             
             

@@ -1,58 +1,48 @@
-<?php include_once("includes/header.php"); ?>
+<?php 
+    include_once("includes/header.php");
+    ?>
+     <title>Shopping Cart - Herball's Food</title>
+</head>
+<body>
+    <?
+    
+    include_once("includes/menu.php");  
+?>
     <section class="sections shopCart">
         <h1 class="wrap">Shopping Cart</h1>
-        <h2 class="wrap">Order Details</h2>
+        <h2 class="wrap subt">Order Details</h2>
        
         <article class="wrap" style="" id="cartAll">
-           <div class="itemComprado">
-               <div class="itemImg">
-                   <img src="imagenes_herballsfood/img_prod1.jpg" alt="">
-               </div>
-               <div class="itemNombre">
-                   <p>Acai X 90 Softgels</p>
-               </div>
-               <div class="itemCantidad">
-                   <select name="itemCantidad" id="">
-                       <option value="1">1</option>
-                       <option value="2">2</option>
-                       <option value="3">3</option>
-                       <option value="4">4</option>
-                       <option value="5">5</option>
-                       <option value="6" selected>6</option>
-                   </select>
-               </div>
-               <div class="itemPrice">
-                   <p>$32.2</p>
-               </div>
-               <div class="itemSubt">
-                   <p>$65.1</p>
-               </div>
-           </div>
-               <div class="itemComprado">
-               <div class="itemImg">
-                   <img src="imagenes_herballsfood/img_prod1.jpg" alt="">
-               </div>
-               <div class="itemNombre">
-                   <p>ProstaCoffee X 90 Softgels</p>
-               </div>
-               <div class="itemCantidad">
-                   <select name="itemCantidad" id="">
-                       <option value="1">1</option>
-                       <option value="2">2</option>
-                       <option value="3">3</option>
-                       <option value="4">4</option>
-                       <option value="5">5</option>
-                       <option value="6" selected>5</option>
-                   </select>
-               </div>
-               <div class="itemPrice">
-                   <p>$44.2</p>
-               </div>
-               <div class="itemSubt">
-                   <p>$185.1</p>
-               </div>
-           </div>
+           
         </article>
+        <div class="grid">
+            <div class="content">
+                <!-- <label for="zip">Enter your shipping zip code for tax estimates</label>
+                <div class="data" style="margin-top: 1em;">
+                    <button class="apply">Apply</button>
+                    <input required class="buton zip"  maxlength="8" name="zip" type="numeric" placeholder="Zip Code">
+                </div>-->
+                <div class="data">
+                    <p class="dataviewx ">Subtotal</p>
+                    <p class="dataviewy subtotal">$</p>
+                </div>
+                  <div class="data ">
+                    <p class="dataviewx">Shipping</p>
+                    <p class="dataviewy ship">Free</p>
+                </div>
+                <div class="data ">
+                    <p class="dataviewx">Estimated Tax</p>
+                    <p class="dataviewy tax">7%</p>
+                </div>
+                 <div class="data ">
+                    <p class="dataviewx">Total</p>
+                    <p class="dataviewy total">$</p>
+                </div>
+                  <div class="data ">
+                   <button class="check">Checkout Now</button>
+                </div>
+            </div>
+        </div>
     </section>
    
 <?php include_once("includes/footer.php"); ?>
@@ -61,6 +51,28 @@
    $(document).ready(function() {
     prod();
     initCart();
-    setProd();         
+    setProd();
+    showItems(); 
+    $(".itemComprado").on("change", ".cants", function(e) {
+        var index = $('option:selected', this).attr('alt');  
+        var canty = $(this).val();
+        lel[index].cant = parseInt(canty);  
+        console.log(lel[index]);   
+        validateProductCart(lel[index]);
+        location.reload(); 
+        console.log("change");
+     });   
+    $(".itemComprado").on("click", ".delete", function(e) {
+        var index = $(this).attr('alt');  
+        console.log(index);
+        borrar(lel[0]);
+        location.reload(); 
+     });   
+      $(".check").on("click",function(e){
+          e.preventDefault();
+          sessionStorage.setItem("subtotal", xto); 
+          sessionStorage.setItem("total",xt);
+          window.location.href = 'Checkout.php';   
+      });
 });
 </script>

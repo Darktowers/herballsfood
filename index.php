@@ -1,4 +1,9 @@
 <?php include_once("includes/header.php"); ?>
+    <title>High Quality products that Support your Health - Herball's Food</title>
+</head>
+<body>
+
+<?php include_once("includes/menu.php"); ?>
     <div class="Slider wrap">
         <center>
             <img class="gif" src="imagenes_herballsfood/scheduler-loading.gif" alt="">
@@ -36,7 +41,7 @@
 </section>
 <div class="imgparal" data-parallax="scroll" data-bleed="0"  data-z-index="1" data-image-src="./img/herball2.jpg">
 	</div>
-<section class="sections products">
+<section class="sections products" id="Products">
     <h1 class="wrap">Our Products</h1>
     <article class="wrapnormal">
         <div class="prods">

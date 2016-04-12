@@ -5,6 +5,7 @@
 @import "owl.transitions.styl"
 @import "owl.carousel.styl"
 @import "owl.theme.styl"
+@import "animate.styl"
 /*prefixes*/
 vendor-prefixes = o ms moz webkit official
 azul = #004697
@@ -388,6 +389,7 @@ verde = #04772D
 .wrap
     max-width: 972px;
     margin: 0 auto;
+    
 .wrapnormal
     max-width: 992px;
     margin: 0 auto;
@@ -397,6 +399,9 @@ body
         border-bottom: 1px solid #7DB952;
         box-shadow: 0px 2px 20px #D6D6D6;
         margin-top: 3.3em;
+        a
+            text-decoration none
+            color: #7DB952;
         p
             margin 0
         &-menuCart
@@ -446,8 +451,9 @@ body
                     border-bottom 2px solid transparent
                     transition: all .2s ease-in-out;
                     &:hover
-                        border-bottom: 2px solid #0E6B26;
-                        cursor pointer
+                        cursor: pointer;
+                        background: #7DB952;
+                        color: white;
     .Slider
         min-height: 470px;
         margin-top: 2em;
@@ -569,12 +575,276 @@ body
             justify-content: space-around;
             padding: 1em;
             border-bottom: 1px solid #7DB952;
+            .delete
+                padding: .5em 0.8em;
+                background: #f00;
+                cursor: pointer;
+                color: #fff;
+                border-radius: 50%;
+                font-size: 0.6em;
             .itemImg
                 img
                     width: 120px;
             .itemNombre
                 max-width: 175px;
                 text-align: left;
+            .itemSubt
+                min-width: 125px;
+                text-align: right;
+        .grid
+            .content
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                max-width: 972px;
+                margin: 0 auto;
+                margin-top: 1em;
+                color: #333;
+                font-size: 1.5em;
+                padding-right: 4.5em;
+                .zip
+                    width: 100px;
+                    text-align: center;
+                    padding: 0.5em 1em;
+                    color: #7DB952;
+                    outline: none;
+                    border: none;
+                    border-bottom: 1px solid #7DB952
+                button
+                    border: none;
+                    background: #F5460D;
+                    color: white;
+                    padding: 0.5em 1.2em;
+                .apply
+                    background:#7DB952 !important;
+                .t
+                    border-top: 1px solid green;
+                .data
+                    flex-direction: row;
+                    display: flex;
+                    .ship
+                        color green
+                    p
+                        margin: 0;
+                        padding: 0.3em;
+                    .dataviewx
+                        min-width: 140px;
+                        text-align: left;
+                    .dataviewy
+                        text-align: right;
+                        min-width: 100px;
+            .shipping
+                text-align right
+                padding 1em
+                button
+                    border: none;
+                    background: #f5460d;
+                    color: #fff;
+                    padding: 0.5em 2.2em;
+                    font-size: 1.5em;
+                    margin-top: 2em;;
+                input
+                    text-align: center;
+                    padding: .5em 1em;
+                    color: #333;
+                    outline: none;
+                    border: none;
+                    border-bottom: 1px solid #8C8C8C
+                    font-size: 1.5em;
+                    transition: all .2s ease-in-out;
+                    &:focus
+                       border-bottom: 1px solid #7db952;
+                       color #7db952
+                .error
+                    background: rgb(255, 20, 9);
+                    color: #fff;
+                    display: none;
+                    font-size: 1.5em;
+                    width: 400px;
+                    text-align: center;
+                    padding: 0.2em;
+                    position absolute
+                    right 0
+                    margin-right: 0.6em;
+                    margin-top: 0.2em;
+                    
+.sucess
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    width: 100%;
+    background: rgba(76, 76, 76, 0.62);
+    display none 
+    p
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        width: 310px;
+        background: white;
+        padding: 1em;
+        box-shadow: 1px 3px 11px #000;
+        align-content: center;
+        max-height: 350px;
+.flex
+    display flex !important;
+    
+footer
+    background: #7DB952;
+    color: white;
+    margin: 0;
+    padding: 0.5em 0;
+    .contentx
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        
+        .brands
+            display: flex;
+            flex-direction: column;
+            padding-left: 2em;
+        .menuFoot
+            nav
+                ul
+                    list-style: none;
+                    border-right: 1px solid;
+                    padding-right: 2em;
+                    a
+                        text-decoration: none;
+                        color: white;
+                        font-size: 1.2em;
+                        transition: all .2s ease-in-out;                            
+                        &:hover
+                            color #F5460D;
+                            text-decoration: underline;
+
+.grid
+    .contentb
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-wrap wrap
+        .right
+            max-width: 580px;
+            padding 0.5em
+            .description
+                font-size: 1.3em;
+                text-align: justify;
+                position relative
+                img
+                    position: absolute;
+                    bottom: -12px;
+                    z-index: -1;
+                    opacity: 0.5;
+                    left 0
+                    
+            .direction
+                background: #19331A;
+                color: white;
+                padding: 0.5em;
+                margin-top: 1em;
+                text-transform: uppercase;
+                p
+                    margin 0
+            .supleFact
+                table
+                    color: #04772D;
+                    width: 100%;
+                    margin: 1em 0;
+                    box-sizing: border-box;
+                    font-size: 20px;
+                    tr
+                        border: 1px solid #047768;
+                        border-bottom: 8px solid;
+                        td
+                            padding: 1em;
+            .others
+                text-align: justify;
+                text-transform: uppercase;
+                color: #04772D;
+                line-height: 1.5;
+            .statement
+                padding: .5em;
+                border: 2px dotted #04772D;
+                    
+
+        .left
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            img
+                max-width: 365px;
+            .button
+                width: 74px;
+                border: 0;
+                padding: 1em;
+                background: #f5460d;
+                color: #fff;
+                text-align: center;
+                display: inline-block;
+                margin-top: 1em;
+                cursor: pointer;
+.contactForm
+    display flex
+    flex-direction: column;
+    button
+        border: none;
+        background: #f5460d;
+        color: #fff;
+        padding: 0.5em 2.2em;
+        font-size: 1.5em;
+        margin-top: 2em;;
+    input
+        text-align: center;
+        padding: .5em 1em;
+        color: #333;
+        outline: none;
+        border: none;
+        border-bottom: 1px solid #8C8C8C
+        font-size: 1.5em;
+        transition: all .2s ease-in-out;
+        &:focus
+            border-bottom: 1px solid #7db952;
+            color #7db952
+    textarea
+        text-align: center;
+        padding: .5em 1em;
+        color: #333;
+        outline: none;
+        border: none;
+        border-bottom: 1px solid #8C8C8C
+        font-size: 1.5em;
+        transition: all .2s ease-in-out;
+        resize none
+        &:focus
+            border-bottom: 1px solid #7db952;
+            color #7db952
+.target
+    padding: 1em;
+    line-height: 0;
+    font-size: 1.1em;
+    border: 1px dotted #2580C1;
+    margin-bottom 1em
+    .name
+        font-size: 1.3em;
+        color: #263469;
+    .email
+        a
+            text-decoration: none;
+            color: #125E9F;
+            transition: all .2s ease-in-out;
+            &:hover
+                color #3088B3;
+                text-decoration: underline;
+.activext
+    cursor: pointer;
+    background: #7DB952;
+    color: white;
+    
+                
         
         
         
